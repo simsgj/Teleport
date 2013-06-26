@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0976C6A93A344727A1FAAD08 /* libPods-TeleportTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA31D643DE34FDD83346078 /* libPods-TeleportTests.a */; };
+		81275980177B418700B20E6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8127597F177B418700B20E6D /* UIKit.framework */; };
+		81275982177B418700B20E6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81275981177B418700B20E6D /* Foundation.framework */; };
+		81275984177B418700B20E6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81275983177B418700B20E6D /* CoreGraphics.framework */; };
+		8127598A177B418700B20E6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81275988177B418700B20E6D /* InfoPlist.strings */; };
+		8127598C177B418700B20E6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127598B177B418700B20E6D /* main.m */; };
+		81275990177B418700B20E6D /* BPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127598F177B418700B20E6D /* BPAppDelegate.m */; };
+		81275992177B418700B20E6D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 81275991177B418700B20E6D /* Default.png */; };
+		81275994177B418700B20E6D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81275993177B418700B20E6D /* Default@2x.png */; };
+		81275996177B418700B20E6D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81275995177B418700B20E6D /* Default-568h@2x.png */; };
+		8127599E177B418700B20E6D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8127599D177B418700B20E6D /* SenTestingKit.framework */; };
+		8127599F177B418700B20E6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8127597F177B418700B20E6D /* UIKit.framework */; };
+		812759A0177B418700B20E6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81275981177B418700B20E6D /* Foundation.framework */; };
+		812759BD177B439D00B20E6D /* BPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 812759B6177B439D00B20E6D /* BPModel.m */; };
+		812759BE177B439D00B20E6D /* NSDate+Milliseconds.m in Sources */ = {isa = PBXBuildFile; fileRef = 812759B8177B439D00B20E6D /* NSDate+Milliseconds.m */; };
+		812759BF177B439D00B20E6D /* NSValueTransformer+BPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 812759BA177B439D00B20E6D /* NSValueTransformer+BPModel.m */; };
+		812759C0177B439D00B20E6D /* NSValueTransformerWithBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 812759BC177B439D00B20E6D /* NSValueTransformerWithBlock.m */; };
+		812759C4177B43C800B20E6D /* BPModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 812759C1177B43C800B20E6D /* BPModelSpec.m */; };
+		812759C5177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 812759C2177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m */; };
+		812759C6177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 812759C3177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m */; };
+		CAAD84294B204B279250A803 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B833FAC81E1546B5A22E405A /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		812759A1177B418700B20E6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81275974177B418700B20E6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8127597B177B418700B20E6D;
+			remoteInfo = Teleport;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6AA31D643DE34FDD83346078 /* libPods-TeleportTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeleportTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8127597C177B418700B20E6D /* Teleport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teleport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8127597F177B418700B20E6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		81275981177B418700B20E6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		81275983177B418700B20E6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		81275987177B418700B20E6D /* Teleport-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Teleport-Info.plist"; sourceTree = "<group>"; };
+		81275989177B418700B20E6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8127598B177B418700B20E6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8127598D177B418700B20E6D /* Teleport-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Teleport-Prefix.pch"; sourceTree = "<group>"; };
+		8127598E177B418700B20E6D /* BPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPAppDelegate.h; sourceTree = "<group>"; };
+		8127598F177B418700B20E6D /* BPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPAppDelegate.m; sourceTree = "<group>"; };
+		81275991177B418700B20E6D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		81275993177B418700B20E6D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		81275995177B418700B20E6D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8127599C177B418700B20E6D /* TeleportTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeleportTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8127599D177B418700B20E6D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		812759A5177B418700B20E6D /* TeleportTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeleportTests-Info.plist"; sourceTree = "<group>"; };
+		812759B5177B439D00B20E6D /* BPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPModel.h; sourceTree = "<group>"; };
+		812759B6177B439D00B20E6D /* BPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPModel.m; sourceTree = "<group>"; };
+		812759B7177B439D00B20E6D /* NSDate+Milliseconds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Milliseconds.h"; sourceTree = "<group>"; };
+		812759B8177B439D00B20E6D /* NSDate+Milliseconds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Milliseconds.m"; sourceTree = "<group>"; };
+		812759B9177B439D00B20E6D /* NSValueTransformer+BPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+BPModel.h"; sourceTree = "<group>"; };
+		812759BA177B439D00B20E6D /* NSValueTransformer+BPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+BPModel.m"; sourceTree = "<group>"; };
+		812759BB177B439D00B20E6D /* NSValueTransformerWithBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSValueTransformerWithBlock.h; sourceTree = "<group>"; };
+		812759BC177B439D00B20E6D /* NSValueTransformerWithBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValueTransformerWithBlock.m; sourceTree = "<group>"; };
+		812759C1177B43C800B20E6D /* BPModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPModelSpec.m; sourceTree = "<group>"; };
+		812759C2177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+BPModelSpec.m"; sourceTree = "<group>"; };
+		812759C3177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValueTransformerWithBlockSpec.m; sourceTree = "<group>"; };
+		82BCE7EFE2634278B255E7A7 /* Pods-TeleportTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleportTests.xcconfig"; path = "Pods/Pods-TeleportTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		B833FAC81E1546B5A22E405A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB2D0DC782747F7979EDC57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81275979177B418700B20E6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81275980177B418700B20E6D /* UIKit.framework in Frameworks */,
+				81275982177B418700B20E6D /* Foundation.framework in Frameworks */,
+				81275984177B418700B20E6D /* CoreGraphics.framework in Frameworks */,
+				CAAD84294B204B279250A803 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81275998177B418700B20E6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8127599E177B418700B20E6D /* SenTestingKit.framework in Frameworks */,
+				8127599F177B418700B20E6D /* UIKit.framework in Frameworks */,
+				812759A0177B418700B20E6D /* Foundation.framework in Frameworks */,
+				0976C6A93A344727A1FAAD08 /* libPods-TeleportTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81275973177B418700B20E6D = {
+			isa = PBXGroup;
+			children = (
+				812759B4177B439D00B20E6D /* Teleport */,
+				81275985177B418700B20E6D /* Demo */,
+				812759A3177B418700B20E6D /* Tests */,
+				8127597E177B418700B20E6D /* Frameworks */,
+				8127597D177B418700B20E6D /* Products */,
+				DBB2D0DC782747F7979EDC57 /* Pods.xcconfig */,
+				82BCE7EFE2634278B255E7A7 /* Pods-TeleportTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		8127597D177B418700B20E6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8127597C177B418700B20E6D /* Teleport.app */,
+				8127599C177B418700B20E6D /* TeleportTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8127597E177B418700B20E6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8127597F177B418700B20E6D /* UIKit.framework */,
+				81275981177B418700B20E6D /* Foundation.framework */,
+				81275983177B418700B20E6D /* CoreGraphics.framework */,
+				8127599D177B418700B20E6D /* SenTestingKit.framework */,
+				B833FAC81E1546B5A22E405A /* libPods.a */,
+				6AA31D643DE34FDD83346078 /* libPods-TeleportTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81275985177B418700B20E6D /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				8127598E177B418700B20E6D /* BPAppDelegate.h */,
+				8127598F177B418700B20E6D /* BPAppDelegate.m */,
+				81275986177B418700B20E6D /* Supporting Files */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		81275986177B418700B20E6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81275987177B418700B20E6D /* Teleport-Info.plist */,
+				81275988177B418700B20E6D /* InfoPlist.strings */,
+				8127598B177B418700B20E6D /* main.m */,
+				8127598D177B418700B20E6D /* Teleport-Prefix.pch */,
+				81275991177B418700B20E6D /* Default.png */,
+				81275993177B418700B20E6D /* Default@2x.png */,
+				81275995177B418700B20E6D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		812759A3177B418700B20E6D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				812759C1177B43C800B20E6D /* BPModelSpec.m */,
+				812759C2177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m */,
+				812759C3177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m */,
+				812759A4177B418700B20E6D /* Supporting Files */,
+			);
+			name = Tests;
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		812759A4177B418700B20E6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				812759A5177B418700B20E6D /* TeleportTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		812759B4177B439D00B20E6D /* Teleport */ = {
+			isa = PBXGroup;
+			children = (
+				812759B5177B439D00B20E6D /* BPModel.h */,
+				812759B6177B439D00B20E6D /* BPModel.m */,
+				812759B7177B439D00B20E6D /* NSDate+Milliseconds.h */,
+				812759B8177B439D00B20E6D /* NSDate+Milliseconds.m */,
+				812759B9177B439D00B20E6D /* NSValueTransformer+BPModel.h */,
+				812759BA177B439D00B20E6D /* NSValueTransformer+BPModel.m */,
+				812759BB177B439D00B20E6D /* NSValueTransformerWithBlock.h */,
+				812759BC177B439D00B20E6D /* NSValueTransformerWithBlock.m */,
+			);
+			path = Teleport;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8127597B177B418700B20E6D /* Teleport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 812759AE177B418700B20E6D /* Build configuration list for PBXNativeTarget "Teleport" */;
+			buildPhases = (
+				176A7AF53490405CB172A238 /* Check Pods Manifest.lock */,
+				81275978177B418700B20E6D /* Sources */,
+				81275979177B418700B20E6D /* Frameworks */,
+				8127597A177B418700B20E6D /* Resources */,
+				111B0AA954AE4219AE255505 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Teleport;
+			productName = Teleport;
+			productReference = 8127597C177B418700B20E6D /* Teleport.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8127599B177B418700B20E6D /* TeleportTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 812759B1177B418700B20E6D /* Build configuration list for PBXNativeTarget "TeleportTests" */;
+			buildPhases = (
+				A1020DFF666A451BA5FD1204 /* Check Pods Manifest.lock */,
+				81275997177B418700B20E6D /* Sources */,
+				81275998177B418700B20E6D /* Frameworks */,
+				81275999177B418700B20E6D /* Resources */,
+				8127599A177B418700B20E6D /* ShellScript */,
+				2F336C349744481789C801DB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				812759A2177B418700B20E6D /* PBXTargetDependency */,
+			);
+			name = TeleportTests;
+			productName = TeleportTests;
+			productReference = 8127599C177B418700B20E6D /* TeleportTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81275974177B418700B20E6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BP;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = BendingSpoons;
+			};
+			buildConfigurationList = 81275977177B418700B20E6D /* Build configuration list for PBXProject "Teleport" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 81275973177B418700B20E6D;
+			productRefGroup = 8127597D177B418700B20E6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8127597B177B418700B20E6D /* Teleport */,
+				8127599B177B418700B20E6D /* TeleportTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8127597A177B418700B20E6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8127598A177B418700B20E6D /* InfoPlist.strings in Resources */,
+				81275992177B418700B20E6D /* Default.png in Resources */,
+				81275994177B418700B20E6D /* Default@2x.png in Resources */,
+				81275996177B418700B20E6D /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81275999177B418700B20E6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		111B0AA954AE4219AE255505 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		176A7AF53490405CB172A238 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		2F336C349744481789C801DB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-TeleportTests-resources.sh\"\n";
+		};
+		8127599A177B418700B20E6D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		A1020DFF666A451BA5FD1204 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81275978177B418700B20E6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8127598C177B418700B20E6D /* main.m in Sources */,
+				81275990177B418700B20E6D /* BPAppDelegate.m in Sources */,
+				812759BD177B439D00B20E6D /* BPModel.m in Sources */,
+				812759BE177B439D00B20E6D /* NSDate+Milliseconds.m in Sources */,
+				812759BF177B439D00B20E6D /* NSValueTransformer+BPModel.m in Sources */,
+				812759C0177B439D00B20E6D /* NSValueTransformerWithBlock.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81275997177B418700B20E6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				812759C4177B43C800B20E6D /* BPModelSpec.m in Sources */,
+				812759C5177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m in Sources */,
+				812759C6177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		812759A2177B418700B20E6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8127597B177B418700B20E6D /* Teleport */;
+			targetProxy = 812759A1177B418700B20E6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		81275988177B418700B20E6D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81275989177B418700B20E6D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		812759AC177B418700B20E6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		812759AD177B418700B20E6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		812759AF177B418700B20E6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBB2D0DC782747F7979EDC57 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Teleport-Prefix.pch";
+				INFOPLIST_FILE = "Demo/Teleport-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		812759B0177B418700B20E6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBB2D0DC782747F7979EDC57 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Teleport-Prefix.pch";
+				INFOPLIST_FILE = "Demo/Teleport-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		812759B2177B418700B20E6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82BCE7EFE2634278B255E7A7 /* Pods-TeleportTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Teleport.app/Teleport";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Teleport-Prefix.pch";
+				INFOPLIST_FILE = "Specs/TeleportTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		812759B3177B418700B20E6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82BCE7EFE2634278B255E7A7 /* Pods-TeleportTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Teleport.app/Teleport";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Teleport-Prefix.pch";
+				INFOPLIST_FILE = "Specs/TeleportTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81275977177B418700B20E6D /* Build configuration list for PBXProject "Teleport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812759AC177B418700B20E6D /* Debug */,
+				812759AD177B418700B20E6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		812759AE177B418700B20E6D /* Build configuration list for PBXNativeTarget "Teleport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812759AF177B418700B20E6D /* Debug */,
+				812759B0177B418700B20E6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		812759B1177B418700B20E6D /* Build configuration list for PBXNativeTarget "TeleportTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812759B2177B418700B20E6D /* Debug */,
+				812759B3177B418700B20E6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81275974177B418700B20E6D /* Project object */;
+}
