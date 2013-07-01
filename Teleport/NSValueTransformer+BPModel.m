@@ -9,7 +9,6 @@
 #import "NSValueTransformer+BPModel.h"
 #import "NSValueTransformerWithBlock.h"
 #import "BPModel.h"
-#import "NSDate+Milliseconds.h"
 
 @implementation NSValueTransformer (BPModel)
 
@@ -57,26 +56,7 @@
     }];
 }
 
-+(NSValueTransformer*)dateValueTansformer
-{
-    return [NSValueTransformerWithBlock reversibleTransformerWithBlock:^ NSString* (NSDate *value) {
-        NSParameterAssert(value);
-        NSParameterAssert([value isKindOfClass:[NSDate class]]);
-        
-        return [value millisecondsSince1970];
-        
-    } reverseBlock:^NSDate* (NSString *value) {
-        NSParameterAssert(value);
-        NSParameterAssert([value isKindOfClass:[NSString class]]);
-        
-        return [NSDate dateWithMillisecondsSince1970:value];
-    }];
-}
 
-+(NSValueTransformer*)datesValueTansformer
-{
-    return [self arrayValueTansformer:[self dateValueTansformer]];
-}
 
 +(NSValueTransformer*)modelValueTansformer:(Class)model
 {

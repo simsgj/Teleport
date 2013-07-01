@@ -12,8 +12,6 @@
 
 +(NSValueTransformer*)arrayValueTansformer:(NSValueTransformer*)itemTransformer;
 +(NSValueTransformer*)enumValueTansformer:(NSDictionary*)dictionary;
-+(NSValueTransformer*)dateValueTansformer;
-+(NSValueTransformer*)datesValueTansformer;
 +(NSValueTransformer*)modelValueTansformer:(Class)model;
 +(NSValueTransformer*)modelsValueTansformer:(Class)model;
 
