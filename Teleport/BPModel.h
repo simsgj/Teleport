@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BPModel : NSObject
+@interface BPModel : NSObject <NSCoding>
 
 +(id)modelFromDictionary:(NSDictionary*)dictionary;
 

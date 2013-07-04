@@ -28,6 +28,16 @@
     return self;
 }
 
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    return [self initWithDictionary:[aDecoder decodeObjectForKey:@"dictionary"]];
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:[self dictionary] forKey:@"dictionary"];
+}
+
 -(NSDictionary *)serializer
 {
     NSAssert(YES, @"This method must not be called on the super class");

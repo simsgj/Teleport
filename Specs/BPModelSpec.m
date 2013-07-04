@@ -156,6 +156,29 @@ describe(@"BPMyPost (a BPModel subclass)", ^{
         //the following test is a false-positive. more investigation required. the code works
         //[[post.postOn   should] equal:now];
     });
+    
+    it(@"should be conform to NSCoding", ^{
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:post];
+
+        BPMyPost *post = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        
+        BPMyComment *comment1 = post.comments[0];
+        BPMyComment *comment2 = post.comments[1];
+        
+        [[[comment1 text] should] equal:@"I miss u sweety"];
+        [[[[comment1 user] name] should] equal:@"Isabella"];
+        [[theValue([[comment1 user] gender]) should] equal:@(BPMyUserGenderFemale)];
+        
+        [[[comment2 text] should] equal:@"I miss u too babe"];
+        [[[[comment2 user] name] should] equal:@"Giorgio"];
+        [[theValue([[comment2 user] gender]) should] equal:@(BPMyUserGenderMale)];
+        
+        [[post.text should] equal:@"I had a great day"];
+        [[[[post user] name] should] equal:@"Giorgio"];
+        [[theValue([[post user] gender]) should] equal:@(BPMyUserGenderMale)];
+        
+        
+    });
 
 });
 
