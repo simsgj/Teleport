@@ -7,9 +7,23 @@
 //
 
 #import "BPModel.h"
-#import "NSDictionary+BlocksKit.h"
-
+#import "BlocksKit.h"
 @implementation BPModel
+
++(id)modelsFromArray:(NSArray*)array
+{
+    return [array map:^id(id obj) {
+        NSAssert([obj isKindOfClass:[NSDictionary class]], @"invalid input format");
+        return [self modelFromDictionary:obj];
+    }];
+}
+
++(id)modelFromDictionary:(NSDictionary*)dictionary
+{
+    return [[[self class] alloc] initWithDictionary:dictionary];
+}
+
+#pragma mark -
 
 - (id)init
 {
@@ -20,7 +34,7 @@
 {
     NSAssert([self class] != [BPModel class], @"this is an abstract class");
     dictionary = dictionary ? dictionary : @{};
-
+    
     self = [super init];
     if (self) {
         [self deserialize:dictionary];
@@ -50,10 +64,7 @@
     return nil;
 }
 
-+(id)modelFromDictionary:(NSDictionary*)dictionary
-{
-    return [[[self class] alloc] initWithDictionary:dictionary];
-}
+
 
 -(NSDictionary*)dictionary
 {
@@ -62,10 +73,12 @@
 
 #pragma mark -
 
+
 -(void)deserialize:(NSDictionary*)dictionary
 {
     [[self serializer] each:^(id key, id obj) {
-        id value = dictionary[obj];
+        
+        id value = [dictionary valueForKeyPath:obj];
         NSValueTransformer *transformer = [self transformers][key];
         
         if (value && ![value isEqual:[NSNull null]]) {
@@ -73,9 +86,10 @@
             if (transformer)
                 value = [transformer reverseTransformedValue:value];
             
-            [self setValue:value forKey:key];
+            [self setValue:value forKeyPath:key];
         }
     }];
+    
 }
 
 -(NSDictionary*)serialize
@@ -85,10 +99,15 @@
         
         NSDictionary *transformers = [self transformers];
         NSValueTransformer *transformer = transformers[key];
-        if (transformer)
-            result[obj] = [transformer transformedValue:[self valueForKey:key]];
-        else
-            result[obj] = [self valueForKey:key];
+        id value = [self valueForKeyPath:key];
+        
+        if (value) {
+            
+            if (transformer)
+                value = [transformer transformedValue:value];
+            
+            result[obj] = value;
+        }
     }];
     
     return [result copy];

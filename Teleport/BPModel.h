@@ -11,6 +11,7 @@
 @interface BPModel : NSObject <NSCoding>
 
 +(id)modelFromDictionary:(NSDictionary*)dictionary;
++(id)modelsFromArray:(NSArray*)array;
 
 -(id)initWithDictionary:(NSDictionary*)dictionary;
 -(NSDictionary*)dictionary;
