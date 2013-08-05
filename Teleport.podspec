@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Teleport"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "Teleport is a lightweight model layer for Objective-C"
   s.homepage     = "https://github.com/BendingSpoons/Teleport"
   s.author       = { "Luca Querella" => "lq@bendingspoons.dk"}
@@ -9,4 +9,5 @@ Pod::Spec.new do |s|
   s.source_files = 'Teleport/*.{h,m}'
   s.frameworks = 'UIKit', 'Foundation', 'QuartzCore', 'CoreGraphics'
   s.requires_arc = true
+  s.dependency 'BlocksKit'
 end

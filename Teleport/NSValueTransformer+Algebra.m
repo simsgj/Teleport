@@ -8,7 +8,6 @@
 
 #import "NSValueTransformer+Algebra.h"
 #import "Teleport.h"
-#import "BlocksKit.h"
 
 @implementation NSValueTransformer (Algebra)
 
