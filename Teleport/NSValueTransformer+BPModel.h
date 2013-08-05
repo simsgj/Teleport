@@ -10,7 +10,6 @@
 
 @interface NSValueTransformer (BPModel)
 
-+(NSValueTransformer*)arrayValueTansformer:(NSValueTransformer*)itemTransformer;
 +(NSValueTransformer*)enumValueTansformer:(NSDictionary*)dictionary;
 +(NSValueTransformer*)modelValueTansformer:(Class)model;
 +(NSValueTransformer*)modelsValueTansformer:(Class)model;

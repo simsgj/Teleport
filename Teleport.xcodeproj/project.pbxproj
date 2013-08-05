@@ -28,6 +28,8 @@
 		812759C5177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 812759C2177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m */; };
 		812759C6177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 812759C3177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m */; };
 		81345534178184A9003CC21D /* NSValueTransformer+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 81345533178184A9003CC21D /* NSValueTransformer+Base64.m */; };
+		8164999D17AFE5540021AE90 /* NSValueTransformer+Algebra.m in Sources */ = {isa = PBXBuildFile; fileRef = 8164999C17AFE5540021AE90 /* NSValueTransformer+Algebra.m */; };
+		816499A117AFF2720021AE90 /* NSValueTransformer+AlgebraSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8164999F17AFF0A60021AE90 /* NSValueTransformer+AlgebraSpec.m */; };
 		817ACE3117AFC46200BB36A4 /* NSValueTransformer+NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 817ACE3017AFC46200BB36A4 /* NSValueTransformer+NSURL.m */; };
 		817ACE3417AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 817ACE3317AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m */; };
 		CAAD84294B204B279250A803 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B833FAC81E1546B5A22E405A /* libPods.a */; };
@@ -74,6 +76,9 @@
 		812759C3177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValueTransformerWithBlockSpec.m; sourceTree = "<group>"; };
 		81345532178184A9003CC21D /* NSValueTransformer+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+Base64.h"; sourceTree = "<group>"; };
 		81345533178184A9003CC21D /* NSValueTransformer+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+Base64.m"; sourceTree = "<group>"; };
+		8164999B17AFE5540021AE90 /* NSValueTransformer+Algebra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+Algebra.h"; sourceTree = "<group>"; };
+		8164999C17AFE5540021AE90 /* NSValueTransformer+Algebra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+Algebra.m"; sourceTree = "<group>"; };
+		8164999F17AFF0A60021AE90 /* NSValueTransformer+AlgebraSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+AlgebraSpec.m"; sourceTree = "<group>"; };
 		817ACE2F17AFC46200BB36A4 /* NSValueTransformer+NSURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+NSURL.h"; sourceTree = "<group>"; };
 		817ACE3017AFC46200BB36A4 /* NSValueTransformer+NSURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+NSURL.m"; sourceTree = "<group>"; };
 		817ACE3317AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+NSURLSpec.m"; sourceTree = "<group>"; };
@@ -172,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				812759C1177B43C800B20E6D /* BPModelSpec.m */,
+				8164999F17AFF0A60021AE90 /* NSValueTransformer+AlgebraSpec.m */,
 				812759C2177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m */,
 				817ACE3317AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m */,
 				812759C3177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m */,
@@ -203,6 +209,8 @@
 		8134553117818405003CC21D /* NSValueTransformer */ = {
 			isa = PBXGroup;
 			children = (
+				8164999B17AFE5540021AE90 /* NSValueTransformer+Algebra.h */,
+				8164999C17AFE5540021AE90 /* NSValueTransformer+Algebra.m */,
 				812759B7177B439D00B20E6D /* NSValueTransformer+NSDateMilliseconds.h */,
 				812759B8177B439D00B20E6D /* NSValueTransformer+NSDateMilliseconds.m */,
 				817ACE2F17AFC46200BB36A4 /* NSValueTransformer+NSURL.h */,
@@ -394,6 +402,7 @@
 				812759C0177B439D00B20E6D /* NSValueTransformerWithBlock.m in Sources */,
 				81345534178184A9003CC21D /* NSValueTransformer+Base64.m in Sources */,
 				817ACE3117AFC46200BB36A4 /* NSValueTransformer+NSURL.m in Sources */,
+				8164999D17AFE5540021AE90 /* NSValueTransformer+Algebra.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816499A117AFF2720021AE90 /* NSValueTransformer+AlgebraSpec.m in Sources */,
 				812759C4177B43C800B20E6D /* BPModelSpec.m in Sources */,
 				812759C5177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m in Sources */,
 				812759C6177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m in Sources */,

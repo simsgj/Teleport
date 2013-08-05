@@ -7,38 +7,11 @@
 //
 
 #import "NSValueTransformer+BPModel.h"
-#import "NSValueTransformerWithBlock.h"
-#import "BPModel.h"
+#import "Teleport.h"
 
 @implementation NSValueTransformer (BPModel)
 
-+(NSValueTransformer*)arrayValueTansformer:(NSValueTransformer*)itemTransformer
-{
-    return [NSValueTransformerWithBlock reversibleTransformerWithBlock:^id(NSArray *values) {
-        NSParameterAssert(values);
-        NSParameterAssert([values isKindOfClass:[NSArray class]]);
-        
-        NSMutableArray *result = [NSMutableArray arrayWithCapacity:values.count];
-        for (NSInteger i=0; i<values.count; i++) {
-            id value = values[i];
-            [result addObject:[itemTransformer transformedValue:value]];
-        }
-        
-        return result;
-        
-    } reverseBlock:^id(NSArray *values) {
-        NSParameterAssert(values);
-        NSParameterAssert([values isKindOfClass:[NSArray class]]);
-        
-        NSMutableArray *result = [NSMutableArray arrayWithCapacity:values.count];
-        for (NSInteger i=0; i<values.count; i++) {
-            id value = values[i];
-            [result addObject:[itemTransformer reverseTransformedValue:value]];
-        }
-        
-        return result;
-    }];
-}
+
 
 +(NSValueTransformer*)enumValueTansformer:(NSDictionary*)dictionary
 {
@@ -78,7 +51,7 @@
 
 +(NSValueTransformer*)modelsValueTansformer:(Class)model
 {
-    return [self arrayValueTansformer:[self modelValueTansformer:model]];
+    return [NSValueTransformer arrayValueTansformer:[self modelValueTansformer:model]];
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "NSValueTransformer+NSURL.h"
-#import "NSValueTransformerWithBlock.h"
+#import "Teleport.h"
 
 @implementation NSValueTransformer (NSURL)
 

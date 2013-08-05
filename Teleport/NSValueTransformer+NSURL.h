@@ -10,5 +10,4 @@
 
 @interface NSValueTransformer (NSURL)
 +(NSValueTransformer*)URLValueTansformer;
-
 @end

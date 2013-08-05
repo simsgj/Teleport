@@ -7,6 +7,7 @@
 //
 
 #import "NSValueTransformerWithBlock.h"
+#import "NSValueTransformer+Algebra.h"
 #import "NSValueTransformer+NSDateMilliseconds.h"
 #import "NSValueTransformer+NSURL.h"
 #import "NSValueTransformer+Base64.h"

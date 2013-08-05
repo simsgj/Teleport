@@ -2,5 +2,4 @@
 
 @interface NSValueTransformer(NSDateMilliseconds)
 +(NSValueTransformer*)millisecondsValueTansformer;
-
 @end

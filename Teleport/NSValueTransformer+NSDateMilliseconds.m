@@ -1,5 +1,5 @@
 #import "NSValueTransformer+NSDateMilliseconds.h"
-#import "NSValueTransformerWithBlock.h"
+#import "Teleport.h"
 
 @interface NSDate (Milliseconds)
 -(NSString*)millisecondsSince1970;
