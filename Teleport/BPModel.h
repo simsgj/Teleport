@@ -19,4 +19,9 @@
 -(NSDictionary*) serializer;
 -(NSDictionary*) transformers;
 
+-(void)beforSerialize:(NSDictionary*)dictionary;
+-(void)afterSerialize:(NSDictionary*)dictionary;
+-(void)beforDeserialize:(NSDictionary*)dictionary;
+-(void)afterDeserialize:(NSDictionary*)dictionary;
+
 @end

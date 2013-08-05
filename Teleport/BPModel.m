@@ -64,6 +64,25 @@
     return nil;
 }
 
+-(void)beforSerialize:(NSDictionary*)dictionary
+{
+    NSAssert(YES, @"This method must not be called on the super class");
+}
+
+-(void)afterSerialize:(NSDictionary*)dictionary
+{
+    NSAssert(YES, @"This method must not be called on the super class");
+}
+
+-(void)beforDeserialize:(NSDictionary*)dictionary
+{
+    NSAssert(YES, @"This method must not be called on the super class");
+}
+
+-(void)afterDeserialize:(NSDictionary*)dictionary
+{
+    NSAssert(YES, @"This method must not be called on the super class");
+}
 
 
 -(NSDictionary*)dictionary
@@ -76,6 +95,7 @@
 
 -(void)deserialize:(NSDictionary*)dictionary
 {
+    [self beforDeserialize:dictionary];
     [[self serializer] each:^(id key, id obj) {
         
         id value = [dictionary valueForKeyPath:obj];
@@ -90,11 +110,15 @@
         }
     }];
     
+    [self afterDeserialize:dictionary];
+    
 }
 
 -(NSDictionary*)serialize
 {
     NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
+    [self beforSerialize:result];
+    
     [[self serializer] each:^(id key, id obj) {
         
         NSDictionary *transformers = [self transformers];
@@ -110,6 +134,7 @@
         }
     }];
     
+    [self afterSerialize:result];
     return [result copy];
 }
 
