@@ -12,7 +12,7 @@
 @implementation NSValueTransformer (NSURL)
 
 
-+(NSValueTransformer *)URLValueTansformer
++(NSValueTransformer *)URLToStringValueTansformer
 {
     
     return [NSValueTransformerWithBlock reversibleTransformerWithBlock:^ NSString* (NSURL *value) {

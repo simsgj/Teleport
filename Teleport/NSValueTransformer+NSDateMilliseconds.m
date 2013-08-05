@@ -37,7 +37,7 @@
 
 @implementation NSValueTransformer(NSDateMilliseconds)
 
-+(NSValueTransformer *)millisecondsValueTansformer
++(NSValueTransformer *)millisecondsToStringValueTansformer
 {
     
     return [NSValueTransformerWithBlock reversibleTransformerWithBlock:^ NSString* (NSDate *value) {

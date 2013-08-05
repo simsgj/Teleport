@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSValueTransformer(NSDateMilliseconds)
-+(NSValueTransformer*)millisecondsValueTansformer;
++(NSValueTransformer*)millisecondsToStringValueTansformer;
 @end
