@@ -28,6 +28,8 @@
 		812759C5177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 812759C2177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m */; };
 		812759C6177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 812759C3177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m */; };
 		81345534178184A9003CC21D /* NSValueTransformer+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 81345533178184A9003CC21D /* NSValueTransformer+Base64.m */; };
+		817ACE3117AFC46200BB36A4 /* NSValueTransformer+NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 817ACE3017AFC46200BB36A4 /* NSValueTransformer+NSURL.m */; };
+		817ACE3417AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 817ACE3317AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m */; };
 		CAAD84294B204B279250A803 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B833FAC81E1546B5A22E405A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,9 @@
 		812759C3177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValueTransformerWithBlockSpec.m; sourceTree = "<group>"; };
 		81345532178184A9003CC21D /* NSValueTransformer+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+Base64.h"; sourceTree = "<group>"; };
 		81345533178184A9003CC21D /* NSValueTransformer+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+Base64.m"; sourceTree = "<group>"; };
+		817ACE2F17AFC46200BB36A4 /* NSValueTransformer+NSURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+NSURL.h"; sourceTree = "<group>"; };
+		817ACE3017AFC46200BB36A4 /* NSValueTransformer+NSURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+NSURL.m"; sourceTree = "<group>"; };
+		817ACE3317AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+NSURLSpec.m"; sourceTree = "<group>"; };
 		82BCE7EFE2634278B255E7A7 /* Pods-TeleportTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleportTests.xcconfig"; path = "Pods/Pods-TeleportTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		B833FAC81E1546B5A22E405A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB2D0DC782747F7979EDC57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -167,6 +172,7 @@
 			children = (
 				812759C1177B43C800B20E6D /* BPModelSpec.m */,
 				812759C2177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m */,
+				817ACE3317AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m */,
 				812759C3177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m */,
 				812759A4177B418700B20E6D /* Supporting Files */,
 			);
@@ -197,6 +203,8 @@
 			children = (
 				812759B7177B439D00B20E6D /* NSValueTransformer+NSDateMilliseconds.h */,
 				812759B8177B439D00B20E6D /* NSValueTransformer+NSDateMilliseconds.m */,
+				817ACE2F17AFC46200BB36A4 /* NSValueTransformer+NSURL.h */,
+				817ACE3017AFC46200BB36A4 /* NSValueTransformer+NSURL.m */,
 				81345532178184A9003CC21D /* NSValueTransformer+Base64.h */,
 				81345533178184A9003CC21D /* NSValueTransformer+Base64.m */,
 				812759B9177B439D00B20E6D /* NSValueTransformer+BPModel.h */,
@@ -383,6 +391,7 @@
 				812759BF177B439D00B20E6D /* NSValueTransformer+BPModel.m in Sources */,
 				812759C0177B439D00B20E6D /* NSValueTransformerWithBlock.m in Sources */,
 				81345534178184A9003CC21D /* NSValueTransformer+Base64.m in Sources */,
+				817ACE3117AFC46200BB36A4 /* NSValueTransformer+NSURL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +402,7 @@
 				812759C4177B43C800B20E6D /* BPModelSpec.m in Sources */,
 				812759C5177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m in Sources */,
 				812759C6177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m in Sources */,
+				817ACE3417AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
