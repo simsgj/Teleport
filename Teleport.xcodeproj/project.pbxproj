@@ -77,6 +77,7 @@
 		817ACE2F17AFC46200BB36A4 /* NSValueTransformer+NSURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+NSURL.h"; sourceTree = "<group>"; };
 		817ACE3017AFC46200BB36A4 /* NSValueTransformer+NSURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+NSURL.m"; sourceTree = "<group>"; };
 		817ACE3317AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+NSURLSpec.m"; sourceTree = "<group>"; };
+		817ACE3517AFC69800BB36A4 /* Teleport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Teleport.h; sourceTree = "<group>"; };
 		82BCE7EFE2634278B255E7A7 /* Pods-TeleportTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleportTests.xcconfig"; path = "Pods/Pods-TeleportTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		B833FAC81E1546B5A22E405A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB2D0DC782747F7979EDC57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -194,6 +195,7 @@
 				8134553117818405003CC21D /* NSValueTransformer */,
 				812759B5177B439D00B20E6D /* BPModel.h */,
 				812759B6177B439D00B20E6D /* BPModel.m */,
+				817ACE3517AFC69800BB36A4 /* Teleport.h */,
 			);
 			path = Teleport;
 			sourceTree = "<group>";
