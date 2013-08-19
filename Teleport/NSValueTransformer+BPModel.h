@@ -13,5 +13,5 @@
 +(NSValueTransformer*)enumValueTansformer:(NSDictionary*)dictionary;
 +(NSValueTransformer*)modelValueTansformer:(Class)model;
 +(NSValueTransformer*)modelsValueTansformer:(Class)model;
-
++(NSValueTransformer*)modelsValueTansformer:(Class)model withCollection:(Class)collection;
 @end

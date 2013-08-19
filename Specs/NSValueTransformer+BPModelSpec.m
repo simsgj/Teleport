@@ -42,12 +42,46 @@ describe(@"NSValueTransformer+BPModel", ^{
         [[[transformer reverseTransformedValue:@"2"] should] equal:@(MyEnumValue2)];
     });
     
-    it(@"should allow to transform models", ^{
+    it(@"should allow to transform a model", ^{
         BPMyModel2 *model = [BPMyModel2 modelFromDictionary:@{@"_number" : @3, @"_boolean": @(YES)}];
         NSValueTransformer *transformer = [NSValueTransformer modelValueTansformer:[BPMyModel2 class]];
         [[[transformer transformedValue:model][@"_boolean"] should] equal:@YES];
         [[[transformer transformedValue:model][@"_number"] should] equal:@3];
     });
+    
+    it(@"should allow to transform a collection of models", ^{
+        BPMyModel2 *model1 = [BPMyModel2 modelFromDictionary:@{@"_number" : @1, @"_boolean": @(NO)}];
+        BPMyModel2 *model2 = [BPMyModel2 modelFromDictionary:@{@"_number" : @2, @"_boolean": @(YES)}];
+
+        NSArray *values = @[model1, model2];
+        NSValueTransformer *transformer = [NSValueTransformer modelsValueTansformer:[BPMyModel2 class]];
+        
+        NSArray *transformedValue = [transformer transformedValue:values];
+        NSSet *reverseTransformedValue  = [transformer reverseTransformedValue:transformedValue];
+        
+        [[transformedValue should] beKindOfClass:[NSArray class]];
+        [[transformedValue shouldNot] beKindOfClass:[NSMutableArray class]];
+        [[reverseTransformedValue should] beKindOfClass:[NSArray class]];
+        [[reverseTransformedValue shouldNot] beKindOfClass:[NSMutableArray class]];
+        
+    });
+    
+    it(@"should allow to transform a collection of models (mutable set)", ^{
+        BPMyModel2 *model1 = [BPMyModel2 modelFromDictionary:@{@"_number" : @1, @"_boolean": @(NO)}];
+        BPMyModel2 *model2 = [BPMyModel2 modelFromDictionary:@{@"_number" : @2, @"_boolean": @(YES)}];
+        
+        NSSet *values = [NSSet setWithArray:@[model1, model2]];
+        NSValueTransformer *transformer = [NSValueTransformer modelsValueTansformer:[BPMyModel2 class] withCollection:[NSMutableSet class]];
+        
+        NSArray *transformedValue = [transformer transformedValue:values];
+        NSSet *reverseTransformedValue  = [transformer reverseTransformedValue:transformedValue];
+        
+        [[transformedValue should] beKindOfClass:[NSArray class]];
+        [[transformedValue shouldNot] beKindOfClass:[NSMutableArray class]];
+        [[reverseTransformedValue should] beKindOfClass:[NSMutableSet class]];
+    });
+    
+
     
 });
 

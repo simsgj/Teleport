@@ -49,9 +49,25 @@
     }];
 }
 
++(NSValueTransformer*)modelsValueTansformer:(Class)model withCollection:(Class)collection
+{
+    if ([collection isSubclassOfClass:[NSMutableArray class]])
+        return [NSValueTransformer arrayValueTansformer:[self modelValueTansformer:model] mutableCollection:YES];
+    else if ([collection isSubclassOfClass:[NSMutableSet class]])
+        return [NSValueTransformer setValueTansformer:[self modelValueTansformer:model] mutableCollection:YES];
+    else if ([collection isSubclassOfClass:[NSArray class]])
+        return [NSValueTransformer arrayValueTansformer:[self modelValueTansformer:model] mutableCollection:NO];
+    else if ([collection isSubclassOfClass:[NSSet class]])
+        return [NSValueTransformer setValueTansformer:[self modelValueTansformer:model] mutableCollection:NO];
+    else {
+        NSAssert(YES, @"collection not valid (%@)", NSStringFromClass(collection));
+        return nil;
+    }
+}
+
 +(NSValueTransformer*)modelsValueTansformer:(Class)model
 {
-    return [NSValueTransformer arrayValueTansformer:[self modelValueTansformer:model]];
+    return [self modelsValueTansformer:model withCollection:[NSArray class]];
 }
 
 @end

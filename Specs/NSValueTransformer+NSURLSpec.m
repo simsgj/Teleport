@@ -19,7 +19,7 @@ describe(@"NSValueTransformer+BPModel", ^{
         NSString *string = @"https://doma.in/path/page?query=true";
         NSURL *URL = [NSURL URLWithString:string];
         
-        NSValueTransformer *transformer = [NSValueTransformer URLValueTansformer];
+        NSValueTransformer *transformer = [NSValueTransformer URLToStringValueTansformer];
         [[[transformer transformedValue:URL] should] equal:string];
         [[[transformer reverseTransformedValue:string] should] equal:URL];
 
