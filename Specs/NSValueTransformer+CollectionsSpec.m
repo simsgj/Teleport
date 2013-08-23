@@ -9,6 +9,22 @@
 #import "Kiwi.h"
 #import "Teleport.h"
 
+@interface BPMyModel3 : BPModel
+@property (nonatomic) BOOL boolean;
+@property (nonatomic) NSNumber *number;
+@end
+
+@implementation BPMyModel3
+-(NSDictionary *)serializer
+{
+    return @{
+             @"boolean" : @"_boolean",
+             @"number" : @"_number"
+             };
+}
+@end
+
+
 SPEC_BEGIN(NSValueTransformer_CollectionsSpec)
 
 describe(@"NSValueTransformer+Collections", ^{
@@ -96,6 +112,64 @@ describe(@"NSValueTransformer+Collections", ^{
         [[reverseTransformedValue should] beKindOfClass:[NSMutableSet class]];
         
     });
+    
+    it(@"should allow to transform collection (Dictionary)", ^{
+        
+
+        
+        NSValueTransformer *eachValueTransformer = [NSValueTransformer eachValueTansformer:[NSValueTransformer modelValueTansformer:[BPMyModel3 class]]];
+        
+        NSValueTransformer *dictionaryTransformer =  [NSValueTransformer chainValueTansformers:@[[NSValueTransformer dictionaryToArrayValueTansformerWithIndex:@"number"], eachValueTransformer]];
+        
+        BPMyModel3 *model1 = [BPMyModel3 modelFromDictionary:@{@"_number" : @1, @"_boolean": @(NO)}];
+        BPMyModel3 *model2 = [BPMyModel3 modelFromDictionary:@{@"_number" : @2, @"_boolean": @(YES)}];
+        
+        NSDictionary *values = @{@1 : model1, @2 : model2};
+        NSArray *expectedTransformedValue = @[model1.dictionary, model2.dictionary];
+        
+        NSArray *transformedValue = [dictionaryTransformer transformedValue:values];
+        NSDictionary* reverseTransformedValue  = [dictionaryTransformer reverseTransformedValue:transformedValue];
+        
+        [[transformedValue should] equal:expectedTransformedValue];
+        [[reverseTransformedValue should] haveCountOf:2];
+        
+        [[[reverseTransformedValue[@1] number] should] equal:@1];
+        [[[reverseTransformedValue[@2] number] should] equal:@2];
+        [[theValue([reverseTransformedValue[@1] boolean]) should] equal:@NO];
+        [[theValue([reverseTransformedValue[@2] boolean]) should] equal:@YES];
+        
+        [[transformedValue should] beKindOfClass:[NSArray class]];
+        [[transformedValue shouldNot] beKindOfClass:[NSMutableArray class]];
+        [[reverseTransformedValue shouldNot] beKindOfClass:[NSMutableDictionary class]];
+        [[reverseTransformedValue should] beKindOfClass:[NSDictionary class]];
+
+    });
+    
+    
+    it(@"should allow to transform collection (Dictionary - mutable)", ^{
+        
+        NSValueTransformer *eachValueTransformer = [NSValueTransformer eachValueTansformer:[NSValueTransformer modelValueTansformer:[BPMyModel3 class]]];
+        
+        NSValueTransformer *dictionaryTransformer =  [NSValueTransformer chainValueTansformers:@[[NSValueTransformer mutableDictionaryToArrayValueTansformerWithIndex:@"number"], eachValueTransformer]];
+        
+        BPMyModel3 *model1 = [BPMyModel3 modelFromDictionary:@{@"_number" : @1, @"_boolean": @(NO)}];
+        BPMyModel3 *model2 = [BPMyModel3 modelFromDictionary:@{@"_number" : @2, @"_boolean": @(YES)}];
+        
+        NSMutableDictionary *values = [@{@1 : model1, @2 : model2} mutableCopy];
+        NSArray *expectedTransformedValue = @[model1.dictionary, model2.dictionary];
+        
+        NSArray *transformedValue = [dictionaryTransformer transformedValue:values];
+        NSDictionary* reverseTransformedValue  = [dictionaryTransformer reverseTransformedValue:transformedValue];
+        
+        [[transformedValue should] equal:expectedTransformedValue];
+        
+        [[transformedValue should] beKindOfClass:[NSArray class]];
+        [[transformedValue shouldNot] beKindOfClass:[NSMutableArray class]];
+        [[reverseTransformedValue should] beKindOfClass:[NSMutableDictionary class]];
+        [[reverseTransformedValue should] beKindOfClass:[NSDictionary class]];
+        
+    });
+
 
 });
 

@@ -13,5 +13,7 @@
 +(NSValueTransformer*)mutableArrayToArrayValueTansformer;
 +(NSValueTransformer*)mutableSetToArrayValueTansformer;
 +(NSValueTransformer*)setToArrayValueTansformer;
++(NSValueTransformer*)dictionaryToArrayValueTansformerWithIndex:(NSString*)index;
++(NSValueTransformer*)mutableDictionaryToArrayValueTansformerWithIndex:(NSString*)index;
 
 @end
