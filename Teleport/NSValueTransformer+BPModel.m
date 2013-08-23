@@ -51,18 +51,20 @@
 
 +(NSValueTransformer*)modelsValueTansformer:(Class)model withCollection:(Class)collection
 {
+    NSValueTransformer *eachValueTransformer = [NSValueTransformer eachValueTansformer:[self modelValueTansformer:model]];
+    
     if ([collection isSubclassOfClass:[NSMutableArray class]])
-        return [NSValueTransformer arrayValueTansformer:[self modelValueTansformer:model] mutableCollection:YES];
+        return [NSValueTransformer chainValueTansformers:@[[NSValueTransformer mutableArrayToArrayValueTansformer], eachValueTransformer]];
     else if ([collection isSubclassOfClass:[NSMutableSet class]])
-        return [NSValueTransformer setValueTansformer:[self modelValueTansformer:model] mutableCollection:YES];
+        return [NSValueTransformer chainValueTansformers:@[[NSValueTransformer mutableSetToArrayValueTansformer], eachValueTransformer]];
     else if ([collection isSubclassOfClass:[NSArray class]])
-        return [NSValueTransformer arrayValueTansformer:[self modelValueTansformer:model] mutableCollection:NO];
+        return eachValueTransformer;
     else if ([collection isSubclassOfClass:[NSSet class]])
-        return [NSValueTransformer setValueTansformer:[self modelValueTansformer:model] mutableCollection:NO];
+        return [NSValueTransformer chainValueTansformers:@[[NSValueTransformer setToArrayValueTansformer], eachValueTransformer]];
     else {
         NSAssert(YES, @"collection not valid (%@)", NSStringFromClass(collection));
         return nil;
-    }
+    } 
 }
 
 +(NSValueTransformer*)modelsValueTansformer:(Class)model

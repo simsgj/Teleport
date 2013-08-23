@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSValueTransformer (Algebra)
-+(NSValueTransformer*)arrayValueTansformer:(NSValueTransformer*)itemTransformer mutableCollection:(BOOL)mutableCollection;
-+(NSValueTransformer*)setValueTansformer:(NSValueTransformer*)itemTransformer mutableCollection:(BOOL)mutableCollection;
-
++(NSValueTransformer*)eachValueTansformer:(NSValueTransformer*)itemTransformer;
 +(NSValueTransformer*)chainValueTansformers:(NSArray*)transformers;
 
 @end

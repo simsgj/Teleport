@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0976C6A93A344727A1FAAD08 /* libPods-TeleportTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA31D643DE34FDD83346078 /* libPods-TeleportTests.a */; };
+		8126D6AB17C75CA900A46BC8 /* NSValueTransformer+Collections.m in Sources */ = {isa = PBXBuildFile; fileRef = 8126D6AA17C75CA900A46BC8 /* NSValueTransformer+Collections.m */; };
+		8126D6AD17C7612900A46BC8 /* NSValueTransformer+CollectionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8126D6AC17C7612900A46BC8 /* NSValueTransformer+CollectionsSpec.m */; };
 		81275980177B418700B20E6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8127597F177B418700B20E6D /* UIKit.framework */; };
 		81275982177B418700B20E6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81275981177B418700B20E6D /* Foundation.framework */; };
 		81275984177B418700B20E6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81275983177B418700B20E6D /* CoreGraphics.framework */; };
@@ -48,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		6AA31D643DE34FDD83346078 /* libPods-TeleportTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeleportTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8126D6A917C75CA900A46BC8 /* NSValueTransformer+Collections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+Collections.h"; sourceTree = "<group>"; };
+		8126D6AA17C75CA900A46BC8 /* NSValueTransformer+Collections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+Collections.m"; sourceTree = "<group>"; };
+		8126D6AC17C7612900A46BC8 /* NSValueTransformer+CollectionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+CollectionsSpec.m"; sourceTree = "<group>"; };
 		8127597C177B418700B20E6D /* Teleport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teleport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8127597F177B418700B20E6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		81275981177B418700B20E6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -180,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				812759C1177B43C800B20E6D /* BPModelSpec.m */,
+				8126D6AC17C7612900A46BC8 /* NSValueTransformer+CollectionsSpec.m */,
 				8164999F17AFF0A60021AE90 /* NSValueTransformer+AlgebraSpec.m */,
 				812759C2177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m */,
 				817ACE3317AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m */,
@@ -212,6 +218,8 @@
 		8134553117818405003CC21D /* NSValueTransformer */ = {
 			isa = PBXGroup;
 			children = (
+				8126D6A917C75CA900A46BC8 /* NSValueTransformer+Collections.h */,
+				8126D6AA17C75CA900A46BC8 /* NSValueTransformer+Collections.m */,
 				8164999B17AFE5540021AE90 /* NSValueTransformer+Algebra.h */,
 				8164999C17AFE5540021AE90 /* NSValueTransformer+Algebra.m */,
 				812759B7177B439D00B20E6D /* NSValueTransformer+NSDateMilliseconds.h */,
@@ -409,6 +417,7 @@
 				817ACE3117AFC46200BB36A4 /* NSValueTransformer+NSURL.m in Sources */,
 				8164999D17AFE5540021AE90 /* NSValueTransformer+Algebra.m in Sources */,
 				816499A817AFFE700021AE90 /* NSValueTransformer+NSString.m in Sources */,
+				8126D6AB17C75CA900A46BC8 /* NSValueTransformer+Collections.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +430,7 @@
 				812759C5177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m in Sources */,
 				812759C6177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m in Sources */,
 				817ACE3417AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m in Sources */,
+				8126D6AD17C7612900A46BC8 /* NSValueTransformer+CollectionsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

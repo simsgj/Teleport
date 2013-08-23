@@ -70,7 +70,7 @@ describe(@"NSValueTransformer+BPModel", ^{
         BPMyModel2 *model1 = [BPMyModel2 modelFromDictionary:@{@"_number" : @1, @"_boolean": @(NO)}];
         BPMyModel2 *model2 = [BPMyModel2 modelFromDictionary:@{@"_number" : @2, @"_boolean": @(YES)}];
         
-        NSSet *values = [NSSet setWithArray:@[model1, model2]];
+        NSMutableSet *values = [NSMutableSet setWithArray:@[model1, model2]];
         NSValueTransformer *transformer = [NSValueTransformer modelsValueTansformer:[BPMyModel2 class] withCollection:[NSMutableSet class]];
         
         NSArray *transformedValue = [transformer transformedValue:values];

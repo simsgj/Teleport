@@ -183,3 +183,4 @@ describe(@"BPMyPost (a BPModel subclass)", ^{
 });
 
 SPEC_END
+

@@ -12,8 +12,7 @@
 
 @implementation NSValueTransformer (Algebra)
 
-+(NSValueTransformer*)arrayValueTansformer:(NSValueTransformer*)itemTransformer mutableCollection:(BOOL)mutableCollection
-{
++(NSValueTransformer*)eachValueTansformer:(NSValueTransformer*)itemTransformer{
     return [NSValueTransformerWithBlock reversibleTransformerWithBlock:^id(NSArray *values) {
         NSParameterAssert(values);
         NSParameterAssert([values isKindOfClass:[NSArray class]]);
@@ -36,35 +35,7 @@
             [result addObject:[itemTransformer reverseTransformedValue:value]];
         }
         
-        return mutableCollection ? result : [result copy];
-    }];
-}
-
-+(NSValueTransformer*)setValueTansformer:(NSValueTransformer*)itemTransformer mutableCollection:(BOOL)mutableCollection
-{
-    return [NSValueTransformerWithBlock reversibleTransformerWithBlock:^id(NSSet *values) {
-        NSParameterAssert(values);
-        NSParameterAssert([values isKindOfClass:[NSSet class]]);
-        
-        NSMutableArray *result = [NSMutableArray arrayWithCapacity:values.count];
-        
-        [values each:^(id sender) {
-            [result addObject:[itemTransformer transformedValue:sender]];
-        }];
-        
         return [result copy];
-        
-    } reverseBlock:^ id(NSArray *values) {
-        NSParameterAssert(values);
-        NSParameterAssert([values isKindOfClass:[NSArray class]]);
-        
-        NSMutableSet *result = [NSMutableSet setWithCapacity:values.count];
-        for (NSInteger i=0; i<values.count; i++) {
-            id value = values[i];
-            [result addObject:[itemTransformer reverseTransformedValue:value]];
-        }
-        
-        return mutableCollection ? result : [result copy];
     }];
 }
 
