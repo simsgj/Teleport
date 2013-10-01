@@ -11,7 +11,6 @@
 #import "NSValueTransformer+Collections.h"
 #import "NSValueTransformer+NSDateMilliseconds.h"
 #import "NSValueTransformer+NSURL.h"
-#import "NSValueTransformer+Base64.h"
 #import "NSValueTransformer+BPModel.h"
 #import "NSValueTransformer+NSString.h"
 #import "BPModel.h"
