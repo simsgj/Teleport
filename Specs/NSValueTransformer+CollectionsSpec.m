@@ -169,6 +169,31 @@ describe(@"NSValueTransformer+Collections", ^{
         [[reverseTransformedValue should] beKindOfClass:[NSDictionary class]];
         
     });
+    
+    it(@"should allow to transform collection (mutabledictionary to dictionary)", ^{
+        
+        NSValueTransformer *eachValueTransformer = [NSValueTransformer eachValueTansformer:[NSValueTransformer modelValueTansformer:[BPMyModel3 class]]];
+        
+        NSValueTransformer *dictionaryTransformer =  [NSValueTransformer chainValueTansformers:@[eachValueTransformer, [NSValueTransformer mutableDictionaryToDictionaryValueTansformer]]];
+        
+        BPMyModel3 *model1 = [BPMyModel3 modelFromDictionary:@{@"_number" : @1, @"_boolean": @(NO)}];
+        BPMyModel3 *model2 = [BPMyModel3 modelFromDictionary:@{@"_number" : @2, @"_boolean": @(YES)}];
+        
+        NSMutableDictionary *values = [@{@1 : model1, @2 : model2} mutableCopy];
+        NSDictionary *expectedTransformedValue = @{@1 : model1.dictionary, @2 : model2.dictionary};
+        
+        id transformedValue = [dictionaryTransformer transformedValue:values];
+        id reverseTransformedValue  = [dictionaryTransformer reverseTransformedValue:transformedValue];
+        
+        [[transformedValue should] equal:expectedTransformedValue];
+        
+        [[transformedValue should] beKindOfClass:[NSDictionary class]];
+        [[transformedValue shouldNot] beKindOfClass:[NSMutableDictionary class]];
+        [[reverseTransformedValue should] beKindOfClass:[NSMutableDictionary class]];
+        
+    });
+    
+    
 
 
 });

@@ -12,7 +12,27 @@
 
 @implementation NSValueTransformer (Algebra)
 
-+(NSValueTransformer*)eachValueTansformer:(NSValueTransformer*)itemTransformer{
++(NSValueTransformer*)eachValueTansformer:(NSValueTransformer*)itemTransformer
+{
+    return [NSValueTransformerWithBlock reversibleTransformerWithBlock:^id(NSArray *values) {
+        NSParameterAssert(values);
+        NSValueTransformer *transformer = [values isKindOfClass:[NSArray class]] ?
+                    [[self class] eachArrayValueTansformer:itemTransformer] :
+                    [[self class] eachDictionaryValueTansformer:itemTransformer];
+        
+        return [transformer transformedValue:values];
+        
+    } reverseBlock:^id(NSArray *values) {
+        
+        NSValueTransformer *transformer = [values isKindOfClass:[NSArray class]] ?
+                [[self class] eachArrayValueTansformer:itemTransformer] :
+                [[self class] eachDictionaryValueTansformer:itemTransformer];
+        
+        return [transformer reverseTransformedValue:values];
+    }];
+}
+
++(NSValueTransformer*)eachArrayValueTansformer:(NSValueTransformer*)itemTransformer{
     return [NSValueTransformerWithBlock reversibleTransformerWithBlock:^id(NSArray *values) {
         NSParameterAssert(values);
         NSParameterAssert([values isKindOfClass:[NSArray class]]);
@@ -22,8 +42,8 @@
             id value = values[i];
             [result addObject:[itemTransformer transformedValue:value]];
         }
-        
-        return [result copy];
+        BOOL mutable = [values isKindOfClass:[NSMutableArray class]];
+        return mutable ? result : [result copy];
         
     } reverseBlock:^id(NSArray *values) {
         NSParameterAssert(values);
@@ -35,7 +55,38 @@
             [result addObject:[itemTransformer reverseTransformedValue:value]];
         }
         
-        return [result copy];
+        BOOL mutable = [values isKindOfClass:[NSMutableArray class]];
+        return mutable ? result : [result copy];
+    }];
+}
+
++(NSValueTransformer*)eachDictionaryValueTansformer:(NSValueTransformer*)itemTransformer
+{
+    return [NSValueTransformerWithBlock reversibleTransformerWithBlock:^id(NSDictionary *values) {
+        NSParameterAssert(values);
+        NSParameterAssert([values isKindOfClass:[NSDictionary class]]);
+        
+        NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
+        [values each:^(id key, id obj) {
+            result[key] = [itemTransformer transformedValue:obj];
+        }];
+        
+        BOOL mutable = [values isKindOfClass:[NSMutableDictionary class]];
+        return mutable ? result : [result copy];
+        
+    } reverseBlock:^id(NSDictionary *values) {
+        
+        NSParameterAssert(values);
+        NSParameterAssert([values isKindOfClass:[NSDictionary class]]);
+        
+        NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
+        [values each:^(id key, id obj) {
+            result[key] = [itemTransformer reverseTransformedValue:obj];
+        }];
+        
+        BOOL mutable = [values isKindOfClass:[NSMutableDictionary class]];
+        return mutable ? result : [result copy];
+        
     }];
 }
 

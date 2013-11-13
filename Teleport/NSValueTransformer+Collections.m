@@ -19,7 +19,7 @@
         NSParameterAssert(value);
         NSParameterAssert([value isKindOfClass:[NSMutableArray class]]);
         return [value copy];
-
+        
     } reverseBlock:^id(id value) {
         NSParameterAssert(value);
         NSParameterAssert([value isKindOfClass:[NSArray class]]);
@@ -30,7 +30,7 @@
 +(NSValueTransformer*)mutableSetToArrayValueTansformer
 {
     return [[self class] setToArrayValueTansformerMutable:YES];
-
+    
 }
 
 +(NSValueTransformer*)setToArrayValueTansformer
@@ -82,8 +82,21 @@
         
         return mutable ? dictionary : [dictionary copy];
     }];
-
+    
 }
 
++(NSValueTransformer*)mutableDictionaryToDictionaryValueTansformer
+{
+    return [NSValueTransformerWithBlock reversibleTransformerWithBlock:^NSDictionary *(NSMutableDictionary* value) {
+        NSParameterAssert(value);
+        NSParameterAssert([value isKindOfClass:[NSMutableDictionary class]]);
+        return [value copy];
+        
+    } reverseBlock:^NSMutableDictionary *(NSDictionary* value) {
+        NSParameterAssert(value);
+        NSParameterAssert([value isKindOfClass:[NSDictionary class]]);
+        return [value mutableCopy];
+    }];
+}
 
 @end
