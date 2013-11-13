@@ -11,6 +11,8 @@
 @interface NSValueTransformer (BPModel)
 
 +(NSValueTransformer*)enumValueTansformer:(NSDictionary*)dictionary;
++(NSValueTransformer*)enumValueTansformer:(NSDictionary*)dictionary fallBackTo:(NSUInteger)fallback;
+
 +(NSValueTransformer*)modelValueTansformer:(Class)model;
 +(NSValueTransformer*)modelsValueTansformer:(Class)model;
 +(NSValueTransformer*)modelsValueTansformer:(Class)model withCollection:(Class)collection;

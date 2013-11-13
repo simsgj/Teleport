@@ -15,6 +15,16 @@
 
 +(NSValueTransformer*)enumValueTansformer:(NSDictionary*)dictionary
 {
+    return [self enumValueTansformer:dictionary fallBackTo:0 fallBackToValue:NO];
+}
+
++(NSValueTransformer*)enumValueTansformer:(NSDictionary*)dictionary fallBackTo:(NSUInteger)fallback
+{
+    return [self enumValueTansformer:dictionary fallBackTo:fallback fallBackToValue:YES];
+}
+
++(NSValueTransformer*)enumValueTansformer:(NSDictionary*)dictionary fallBackTo:(NSUInteger)fallback fallBackToValue:(BOOL)fallBackToValue
+{
     return [NSValueTransformerWithBlock reversibleTransformerWithBlock:^ NSString* (NSNumber *value) {
         NSParameterAssert(value);
         NSParameterAssert([value isKindOfClass:[NSNumber class]]);
@@ -25,10 +35,15 @@
         NSParameterAssert(value);
         NSParameterAssert([value isKindOfClass:[NSString class]]);
         
-        return [dictionary allKeysForObject:value].lastObject;
+        NSNumber *result =[dictionary allKeysForObject:value].lastObject;
+
+        if (fallBackToValue)
+            result = @(fallback);
+
+        NSAssert(result, @"impossibile to deserialize value with given dictionary");
+        return result;
     }];
 }
-
 
 
 +(NSValueTransformer*)modelValueTansformer:(Class)model

@@ -10,7 +10,6 @@
 
 @interface NSValueTransformer (Algebra)
 +(NSValueTransformer*)eachValueTansformer:(NSValueTransformer*)itemTransformer;
-
 +(NSValueTransformer*)chainValueTansformers:(NSArray*)transformers;
 
 @end
