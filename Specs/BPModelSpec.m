@@ -66,7 +66,7 @@ typedef NS_ENUM(NSUInteger, BPMyUserGender) {
     return @{
              @"user" : [NSValueTransformer modelValueTansformer:[BPMyUser class]],
              @"comments" : [NSValueTransformer modelsValueTansformer:[BPMyComment class]],
-             @"postOn" : [NSValueTransformer millisecondsToStringValueTansformer]};
+             @"postOn" : [NSValueTransformer dateToMillisecondsStringValueTansformer]};
 }
 @end
 
@@ -94,7 +94,7 @@ describe(@"BPMyPost (a BPModel subclass)", ^{
     
     beforeEach(^{
         now = [NSDate new];
-        nowMilliseconds = [[NSValueTransformer millisecondsToStringValueTansformer] transformedValue:now];
+        nowMilliseconds = [[NSValueTransformer dateToMillisecondsStringValueTansformer] transformedValue:now];
         
         user1 = [[BPMyUser alloc] init];
         user2 = [[BPMyUser alloc] init];

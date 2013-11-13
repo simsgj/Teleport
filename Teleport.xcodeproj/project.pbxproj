@@ -34,6 +34,10 @@
 		816499A817AFFE700021AE90 /* NSValueTransformer+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 816499A717AFFE700021AE90 /* NSValueTransformer+NSString.m */; };
 		817ACE3117AFC46200BB36A4 /* NSValueTransformer+NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 817ACE3017AFC46200BB36A4 /* NSValueTransformer+NSURL.m */; };
 		817ACE3417AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 817ACE3317AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m */; };
+		81DB37FE18337B20007AF3BF /* NSValueTransformer+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DB37FD18337B20007AF3BF /* NSValueTransformer+UIColor.m */; };
+		81DB380018337D1B007AF3BF /* NSValueTransformer+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DB37FF18337D1B007AF3BF /* NSValueTransformer+UIColor.m */; };
+		81DB380218337F21007AF3BF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DB380118337F21007AF3BF /* QuartzCore.framework */; };
+		81DB38031833806F007AF3BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81275983177B418700B20E6D /* CoreGraphics.framework */; };
 		CAAD84294B204B279250A803 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B833FAC81E1546B5A22E405A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +92,10 @@
 		817ACE3017AFC46200BB36A4 /* NSValueTransformer+NSURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+NSURL.m"; sourceTree = "<group>"; };
 		817ACE3317AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+NSURLSpec.m"; sourceTree = "<group>"; };
 		817ACE3517AFC69800BB36A4 /* Teleport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Teleport.h; sourceTree = "<group>"; };
+		81DB37FC18337B20007AF3BF /* NSValueTransformer+UIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+UIColor.h"; sourceTree = "<group>"; };
+		81DB37FD18337B20007AF3BF /* NSValueTransformer+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+UIColor.m"; sourceTree = "<group>"; };
+		81DB37FF18337D1B007AF3BF /* NSValueTransformer+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+UIColor.m"; sourceTree = "<group>"; };
+		81DB380118337F21007AF3BF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		82BCE7EFE2634278B255E7A7 /* Pods-TeleportTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleportTests.xcconfig"; path = "Pods/Pods-TeleportTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		B833FAC81E1546B5A22E405A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB2D0DC782747F7979EDC57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -98,9 +106,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81275984177B418700B20E6D /* CoreGraphics.framework in Frameworks */,
+				81DB380218337F21007AF3BF /* QuartzCore.framework in Frameworks */,
 				81275980177B418700B20E6D /* UIKit.framework in Frameworks */,
 				81275982177B418700B20E6D /* Foundation.framework in Frameworks */,
-				81275984177B418700B20E6D /* CoreGraphics.framework in Frameworks */,
 				CAAD84294B204B279250A803 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DB38031833806F007AF3BF /* CoreGraphics.framework in Frameworks */,
 				8127599E177B418700B20E6D /* SenTestingKit.framework in Frameworks */,
 				8127599F177B418700B20E6D /* UIKit.framework in Frameworks */,
 				812759A0177B418700B20E6D /* Foundation.framework in Frameworks */,
@@ -144,6 +154,7 @@
 		8127597E177B418700B20E6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81DB380118337F21007AF3BF /* QuartzCore.framework */,
 				8127597F177B418700B20E6D /* UIKit.framework */,
 				81275981177B418700B20E6D /* Foundation.framework */,
 				81275983177B418700B20E6D /* CoreGraphics.framework */,
@@ -187,6 +198,7 @@
 				812759C2177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m */,
 				817ACE3317AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m */,
 				812759C3177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m */,
+				81DB37FF18337D1B007AF3BF /* NSValueTransformer+UIColor.m */,
 				812759A4177B418700B20E6D /* Supporting Files */,
 			);
 			name = Tests;
@@ -229,6 +241,8 @@
 				812759BC177B439D00B20E6D /* NSValueTransformerWithBlock.m */,
 				816499A617AFFE700021AE90 /* NSValueTransformer+NSString.h */,
 				816499A717AFFE700021AE90 /* NSValueTransformer+NSString.m */,
+				81DB37FC18337B20007AF3BF /* NSValueTransformer+UIColor.h */,
+				81DB37FD18337B20007AF3BF /* NSValueTransformer+UIColor.m */,
 			);
 			name = NSValueTransformer;
 			sourceTree = "<group>";
@@ -412,6 +426,7 @@
 				8164999D17AFE5540021AE90 /* NSValueTransformer+Algebra.m in Sources */,
 				816499A817AFFE700021AE90 /* NSValueTransformer+NSString.m in Sources */,
 				8126D6AB17C75CA900A46BC8 /* NSValueTransformer+Collections.m in Sources */,
+				81DB37FE18337B20007AF3BF /* NSValueTransformer+UIColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +440,7 @@
 				812759C6177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m in Sources */,
 				817ACE3417AFC52400BB36A4 /* NSValueTransformer+NSURLSpec.m in Sources */,
 				8126D6AD17C7612900A46BC8 /* NSValueTransformer+CollectionsSpec.m in Sources */,
+				81DB380018337D1B007AF3BF /* NSValueTransformer+UIColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
