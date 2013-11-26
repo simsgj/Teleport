@@ -83,6 +83,7 @@
 		812759C1177B43C800B20E6D /* BPModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPModelSpec.m; sourceTree = "<group>"; };
 		812759C2177B43C800B20E6D /* NSValueTransformer+BPModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+BPModelSpec.m"; sourceTree = "<group>"; };
 		812759C3177B43C800B20E6D /* NSValueTransformerWithBlockSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValueTransformerWithBlockSpec.m; sourceTree = "<group>"; };
+		813656491844F77600AE31EF /* Teleport.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Teleport.podspec; sourceTree = "<group>"; };
 		8164999B17AFE5540021AE90 /* NSValueTransformer+Algebra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+Algebra.h"; sourceTree = "<group>"; };
 		8164999C17AFE5540021AE90 /* NSValueTransformer+Algebra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+Algebra.m"; sourceTree = "<group>"; };
 		8164999F17AFF0A60021AE90 /* NSValueTransformer+AlgebraSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+AlgebraSpec.m"; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		81275973177B418700B20E6D = {
 			isa = PBXGroup;
 			children = (
+				813656491844F77600AE31EF /* Teleport.podspec */,
 				812759B4177B439D00B20E6D /* Teleport */,
 				81275985177B418700B20E6D /* Demo */,
 				812759A3177B418700B20E6D /* Tests */,
