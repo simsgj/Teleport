@@ -13,7 +13,7 @@
 
 +(id)modelsFromArray:(NSArray*)array
 {
-    return [array map:^id(id obj) {
+    return [array bk_map:^id(id obj) {
         NSAssert([obj isKindOfClass:[NSDictionary class]], @"invalid input format");
         return [self modelFromDictionary:obj];
     }];
@@ -97,7 +97,7 @@
 -(void)deserialize:(NSDictionary*)dictionary
 {
     [self beforDeserialize:dictionary];
-    [[self serializer] each:^(id key, id obj) {
+    [[self serializer] bk_each:^(id key, id obj) {
         
         id value = [dictionary valueForKeyPath:obj];
         NSValueTransformer *transformer = [self transformers][key];
@@ -120,7 +120,7 @@
     NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
     [self beforSerialize:result];
     
-    [[self serializer] each:^(id key, id obj) {
+    [[self serializer] bk_each:^(id key, id obj) {
         
         NSDictionary *transformers = [self transformers];
         NSValueTransformer *transformer = transformers[key];

@@ -75,7 +75,7 @@
         NSParameterAssert([values isKindOfClass:[NSArray class]]);
         NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithCapacity:values.count];
         
-        [values each:^(id sender) {
+        [values bk_each:^(id sender) {
             id key = [sender valueForKey:index];
             [dictionary setValue:sender forKey:key];
         }];

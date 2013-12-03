@@ -67,7 +67,7 @@
         NSParameterAssert([values isKindOfClass:[NSDictionary class]]);
         
         NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
-        [values each:^(id key, id obj) {
+        [values bk_each:^(id key, id obj) {
             result[key] = [itemTransformer transformedValue:obj];
         }];
         
@@ -80,7 +80,7 @@
         NSParameterAssert([values isKindOfClass:[NSDictionary class]]);
         
         NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
-        [values each:^(id key, id obj) {
+        [values bk_each:^(id key, id obj) {
             result[key] = [itemTransformer reverseTransformedValue:obj];
         }];
         
