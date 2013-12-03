@@ -42,6 +42,16 @@ describe(@"NSValueTransformer+BPModel", ^{
         [[[transformer reverseTransformedValue:@"2"] should] equal:@(MyEnumValue2)];
     });
     
+    it(@"should allow to transform enum with fallback", ^{
+        NSValueTransformer *transformer = [NSValueTransformer enumValueTansformer:@{@(MyEnumValue1): @"1", @(MyEnumValue2) : @"2"} fallBackTo:1];
+        [[[transformer transformedValue:@(MyEnumValue1)] should] equal:@"1"];
+        [[[transformer transformedValue:@(MyEnumValue2)] should] equal:@"2"];
+        [[[transformer reverseTransformedValue:@"1"] should] equal:@(MyEnumValue1)];
+        [[[transformer reverseTransformedValue:@"2"] should] equal:@(MyEnumValue2)];
+        [[[transformer reverseTransformedValue:@"3"] should] equal:@(MyEnumValue2)];
+
+    });
+    
     it(@"should allow to transform a model", ^{
         BPMyModel2 *model = [BPMyModel2 modelFromDictionary:@{@"_number" : @3, @"_boolean": @(YES)}];
         NSValueTransformer *transformer = [NSValueTransformer modelValueTansformer:[BPMyModel2 class]];

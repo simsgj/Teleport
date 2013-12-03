@@ -37,7 +37,7 @@
         
         NSNumber *result =[dictionary allKeysForObject:value].lastObject;
 
-        if (fallBackToValue)
+        if (!result && fallBackToValue)
             result = @(fallback);
 
         NSAssert(result, @"impossibile to deserialize value with given dictionary");
