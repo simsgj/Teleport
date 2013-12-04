@@ -13,4 +13,7 @@
 #import "NSValueTransformer+NSURL.h"
 #import "NSValueTransformer+BPModel.h"
 #import "NSValueTransformer+NSString.h"
+#import "NSValueTransformer+NSData.h"
+#import "NSValueTransformer+UIImage.h"
+
 #import "BPModel.h"
