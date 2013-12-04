@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Teleport"
-  s.version      = "0.0.16"
+  s.version      = "0.0.17"
   s.summary      = "Teleport is a lightweight model layer for Objective-C"
   s.homepage     = "http://github.com/BendingSpoons/Teleport"
   s.license      = { :type => 'MIT', :file => 'LICENSE.md' }
