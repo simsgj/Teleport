@@ -26,11 +26,11 @@
 
         
     } reverseBlock:^NSData *(NSString * value) {
-
+        
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-        if ([value respondsToSelector:@selector(initWithBase64EncodedString:options:)])
+        if ([[NSData alloc] respondsToSelector:@selector(initWithBase64EncodedString:options:)])
             return [[NSData alloc] initWithBase64EncodedString:value options:0];
-        else if ([value respondsToSelector:@selector(initWithBase64Encoding:)])
+        else if ([[NSData alloc] respondsToSelector:@selector(initWithBase64Encoding:)])
             return [[NSData alloc] initWithBase64Encoding:value];
         else
             return nil;
