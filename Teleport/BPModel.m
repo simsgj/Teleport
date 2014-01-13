@@ -59,6 +59,11 @@
     return nil;
 }
 
+-(NSDictionary *)deserializer
+{
+    return self.serializer;
+}
+
 -(NSDictionary *)transformers
 {
     NSAssert(YES, @"This method must not be called on the super class");
@@ -97,7 +102,7 @@
 -(void)deserialize:(NSDictionary*)dictionary
 {
     [self beforDeserialize:dictionary];
-    [[self serializer] bk_each:^(id key, id obj) {
+    [[self deserializer] bk_each:^(id key, id obj) {
         
         id value = [dictionary valueForKeyPath:obj];
         NSValueTransformer *transformer = [self transformers][key];
