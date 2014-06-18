@@ -14,6 +14,8 @@
 +(id)modelsFromArray:(NSArray*)array;
 
 -(id)initWithDictionary:(NSDictionary*)dictionary;
+-(void)updateWithDictionary:(NSDictionary*)dictionary;
+
 -(NSDictionary*)dictionary;
 
 -(NSDictionary*) serializer;

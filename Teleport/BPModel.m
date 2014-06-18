@@ -43,6 +43,11 @@
     return self;
 }
 
+-(void)updateWithDictionary:(NSDictionary *)dictionary
+{
+    [self deserialize:dictionary];
+}
+
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
     return [self initWithDictionary:[aDecoder decodeObjectForKey:@"dictionary"]];
@@ -113,12 +118,21 @@
                 value = [transformer reverseTransformedValue:value];
             
             [self setValue:value forKeyPath:key];
+        } else {
+            [self setValue:nil forKey:key];
         }
+        
     }];
     
     [self afterDeserialize:dictionary];
     
 }
+
+-(void)setNilValueForKey:(NSString *)key
+{
+    [self setValue:@0 forKey:key];
+}
+
 
 -(NSDictionary*)serialize
 {
